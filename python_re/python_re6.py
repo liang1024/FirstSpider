@@ -15,7 +15,7 @@ i = 0
 html=urllib.request.urlopen(url).read().decode('utf-8')
 urllist = re.findall(r'http://.+\.jpg',html)
 
-if os.path.exists(flie): #判断文件夹是否已经存在
+if os.path.exists(flie):
     print("文件夹已经存在了。")
 else:
     os.makedirs(flie) #创建文件夹
