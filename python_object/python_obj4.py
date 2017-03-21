@@ -1,4 +1,3 @@
-
 # 目录:
 # 1.类的多态:
 # 多态要素:
@@ -26,31 +25,70 @@
 #  __and__(self,other)     和
 
 class Programer:
-    def __init__(self,name,age):
-        self.name=name
-        if isinstance(age,int):
-            self.age=int
+    def __init__(self, name, age):
+        self.name = name
+        if isinstance(age, int):
+            self.age = int
         else:
             raise Exception('age must be int')
 
     def __eq__(self, other):
-        if isinstance(other,Programer):
-            if self.age==other.age:
+        if isinstance(other, Programer):
+            if self.age == other.age:
                 return True
             else:
                 return False
         else:
             raise Exception('The type of Object must be Programer')
 
-    # def __add__(self, other):
-    #     if isinstance(other,Programer):
-    #         return self.age+other.age
-    #     else:
-    #         raise Exception('The type of object must be Progeamer')
+            # def __add__(self, other):
+            #     if isinstance(other,Programer):
+            #         return self.age+other.age
+            #     else:
+            #         raise Exception('The type of object must be Progeamer')
 
 
-if __name__=='__main__':
-    p1=Programer('Albert',25)
-    p2=Programer('Bill',30)
-    print(p1==p2)
+if __name__ == '__main__':
+    p1 = Programer('Albert', 25)
+    p2 = Programer('Bill', 30)
+    print(p1 == p2)
     # print(p1+p2)
+
+
+
+# 4.类的展现:
+#       4-1.转换为字符串
+#       __str__   不可作为代码运行
+#       __repr__  可作为代码运行
+#       __unicode__
+#       4-2.展现对象属性
+#       __dir__
+
+# 5.类的属性访问
+#       5-1.设置对象属性
+#       __setattr_(self,name,value):
+#
+#       5-2.查询对象属性
+#       __getattr__(self,name)
+#       __getatribute__(self,name)
+#       5-3.删除对象属性
+#       __delattr__(self,name)
+
+# 6.课程总结
+
+#     6-1.面向对象理论
+#     1.类和对象
+#     2.属性和方法
+#     3.继承
+
+#     6-2.Python面向对象基础
+#     1.定义类
+#     2.定义属性和方法
+#     3.继承
+
+#     6-3.Magic Method
+#     1.构造对象
+#     2.运算符
+#     3.类的展现
+#     4.类的属性访问
+#     5.更多Magic Method:python官网
