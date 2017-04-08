@@ -33,4 +33,5 @@ req.add_header("User-Agent",
 # 
 resp = urlopen(req, data=postdata.encode("utf-8"))
 
+print(resp.status)
 print(resp.read().decode("utf-8"))
