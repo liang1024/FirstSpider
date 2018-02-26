@@ -3,8 +3,6 @@ from urllib.request import Request
 from urllib.request import urlopen
 from urllib import parse
 
-from bs4 import BeautifulSoup
-
 '''获取百度的源码'''
 print("----------添加Header之前-------------")
 resp = request.urlopen("http://www.baidu.com")
